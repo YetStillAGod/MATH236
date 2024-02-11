@@ -1,0 +1,479 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\begin{array}{c|ccc}
+           \ast&e&a&b\\
+           \hline
+           e&e&a&b\\
+           a&a&b&e\\
+           b&b&e&a\\ 
+        \end{array}\\
+        &\text{This is the only way to fill the group table}:\mathbb{Z} _3\\
+        \Rightarrow&\text{True}
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\mathbb{V}_4:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            \hline
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&e&a\\
+            c&c&b&a&e\\
+        \end{array}\\
+        &\mathbb{Z} _4:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&a&e\\
+            c&c&b&e&a\\
+        \end{array}\\
+        &\mathbb{V} _4\cong \mathbb{Z} _2\times\mathbb{Z} _2\\
+        \Rightarrow&\mathbb{Z} _4\text{ and }\mathbb{V} _4\text{ have elements of different orders}\\
+        &\text{ not isomorphic}\\
+        &\text{false}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Order 2}\\
+        &\{e\}\Rightarrow \text{abelian}\\
+        &\text{Order 2}\\
+        &\begin{array}{c|cc}
+            \ast&e&a\\
+            e&e&a\\
+            a&a&e\\
+        \end{array} \Rightarrow \text{abelian}\\
+        &\text{Order 3}\\
+        &\begin{array}{c|ccc}
+            \ast&e&a&b\\
+            \hline
+            e&e&a&b\\
+            a&a&b&e\\
+            b&b&e&a\\ 
+        \end{array}\Rightarrow\text{abelian}\\
+        &\text{Order 4}\\
+        &\mathbb{Z} _4:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&a&e\\
+            c&c&b&e&a\\
+        \end{array}\Rightarrow\text{abelian}\\
+        &\text{Other forms of }\mathbb{Z} _4\text{ use the same method as this}\\
+        &\mathbb{V}_4:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            \hline
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&e&a\\
+            c&c&b&a&e\\
+        \end{array}\Rightarrow\text{abelian}\\
+        \Rightarrow&\text{True}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &|\mathbb{Q} |\ne|\mathbb{R} |\\
+        &\text{There cannot be a bijection map between }\mathbb{Q} \text{ and }\mathbb{R} \\
+        &\langle\mathbb{Q} ,+\rangle\text{ and }\langle\mathbb{R} ,+\rangle\text{ are not isomorphic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &e_{\langle\mathbb{R}^\ast,\cdot\rangle}=1\\
+        &-1\cdot-1=1\\
+        &e_{\langle\mathbb{R},+\rangle}=0\\
+        &\nexists n\ne0\in \mathbb{R},n+n=0\\
+        \Rightarrow&\nexists f:\mathbb{R} \rightarrow \mathbb{R} ^\ast ,f(x+y)\coloneqq f(x)f(y)\\
+        &\text{not isomorphic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 3}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose}:\phi:\mathbb{C} ^\ast\rightarrow\mathbb{R}^\ast\\
+        &\phi(1)=1=\phi((-1)(-1))=(\phi(-1))^2\\
+        &\phi(-1)=-1\leftarrow\phi\text{ is injective}\\
+        &\phi(-1)=\phi(i^2)=(\phi(i))^2=-1\\
+        &\phi(i)=\pm i\\
+        &\phi(i)=\pm i\nLeftrightarrow \phi:\mathbb{C} ^\ast\rightarrow\mathbb{R}^\ast\\
+        &\text{They are not isomorphic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 4}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &f:\mathbb{R} \rightarrow\mathbb{R} ^+,f\coloneqq e^x\\
+        &f(x+y)=e^{x+y}=e^xe^y=f(x)f(y)\\
+        \Rightarrow&\text{is isomorphic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 5}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &f:G\rightarrow H\\
+        &f(a_1)=f(a_2)\\
+        \Rightarrow&\text{all the terms in }f(a_1)\text{ and }f(a_2)\text{ are equal}\\
+        \Rightarrow&a_1=a_2\\
+        \Rightarrow&\text{injective}\\
+        &\forall h\in H,\exists g\in G:f(g)=h\\
+        \Rightarrow&\text{surjective}\\
+        \Rightarrow&\text{bijective}\\
+        &f(a)\coloneqq u,f(b)\coloneqq v\\
+        &f(a)+f(b)=u+v\\
+        &f(a+b)=f((a_1+b_1,a_2+b_2,...))\\
+        &f(a+b)(q)=f((a_1+b_1,a_2+b_2,...))q=f(a_1,a_2,...)+f(b_1,b_2,...)q=u(q)+v(q)\\
+        \Rightarrow&f(a+b)=f(a)+f(b)\\
+        \Rightarrow&\text{isomorphism}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Closure}:\\
+        &\exists a,b\in H_1\cap H_2\\
+        &H_1,H_2\text{ are subgroups}\\
+        &a\ast b\in H_1\land a\ast b\in H_2\\
+        \Rightarrow&a\ast b\in H_1\cap H_2\\
+        &\text{Identity}:\\
+        &H_1,H_2\text{ are subgroups}\\\\
+        &e\in H_1\land e\in H_2\\
+        &e\in H_1\cap H_2\\
+        &\text{Inverse}:\\
+        &H_1,H_2\text{ are subgroups}\\
+        &\exists a\in H_1\land a\in H_2\\
+        \Rightarrow&a^{-1}\in H_1\land a^{-1}\in H_2\\
+        \Rightarrow&a^{-1}\in H_1\cap H_2\\
+        \Rightarrow&H_1\cap H_2\text{ is a subgroup}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &G\coloneqq \langle \mathbb{Z}_6 ,+_6\rangle\\
+        &G_1\coloneqq\{0,3\}\text{ is a subgroup of }G\\
+        &G_2\coloneqq\{0,2,4\}\text{ is a subgroup of }G\\
+        &G_1\cup G_2=\{0,2,3,4\}\\
+        &2+_63=5\notin G_1\cup G_2\\
+        \Rightarrow&G_1\cup G_2\text{ is not a subgroup}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Closure}:\\
+        &\exists a,b\in G\\
+        &a^2,b^2\in H\\
+        &a^2b^2=(ab)^2\leftarrow G\text{ is abelian}\\
+        &(ab)^2\in H\\
+        &\text{Identity}:\\
+        &e\in G\\
+        &e^2=e\\
+        &e^2\in H\\
+        \Rightarrow&e\in H\\
+        \text{Inverse}:
+        &\forall a^2\in H,\exists a^{-2}:a^2a^{-2}=e\\
+        &a^{-2}=(a^{-1})^{-2}\\
+        &(a^{-1})^{-2}\in H\\
+        \Rightarrow&H\text{ is a subgroup}
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+\begin{equation*}
+    \begin{split}
+        &\text{Closure}:\\
+        &\exists a,b\in H\\
+        &(ab)^2=a^2b^2\\
+        &a^2b^2=e^2=e\\
+        \Rightarrow&ab\in H\\
+        &\text{Identity}:\\
+        &e^2=e\\
+        \Rightarrow&e\in H\\
+        &\text{Inverse}:\\
+        &\forall a\in H,\exists a^{-1}:aa^{-1}=e\\
+        &(aa^{-1})^2=e^2=e\\
+        &a^2(a^{-1})^2=e\leftarrow G\text{ is abelian}\\
+        &(a^{-1})^2=e\leftarrow a^2=e\\
+        \Rightarrow&a^{-1}\in H\\
+        \Rightarrow&H\text{ is a subgroup}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Reflexivity}:\\
+        &a^{-1}a=e\\
+        &H\text{ is a subgroup}\\
+        \Rightarrow&e\in H\\
+        \Rightarrow&a^{-1}a\in H\\
+        \Rightarrow&a\sim a\\
+        &\text{Symmetry}:\\
+        &\exists a\sim b\\
+        \Rightarrow&a^{-1}b\in H\\
+        &H\text{ is a subgroup}\\
+        &(a^{-1}b)^{-1}\in H\\
+        \Rightarrow&b^{-1}a\in H\\
+        \Rightarrow&b\sim a\\
+        &\text{Transitivity}:\\
+        &\exists a\sim b,b\sim c\\
+        \Rightarrow&a^{-1}b,b^{-1}c\in H\\
+        &H\text{ is a subgroup}\\
+        \Rightarrow&a^{-1}bb^{-1}c\in H\\
+        \Rightarrow&a^{-1}c\in H\\
+        \Rightarrow&a\sim c\\
+        \Rightarrow&\sim \text{ is an equivalence relation}\\
+        &\bar{e}=\{x|x^{-1}e\in H\}\\
+        \Rightarrow&x^{-1}e\in H\\
+        &x^{-1}\in H\\
+        &x\in H\\
+        \Rightarrow&\bar{e}=H\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a\in G\\
+        &a\ast a=a^2\in G\\
+        \Rightarrow&\forall i\in \mathbb{Z}^+, a^i\in G\\
+        &G\text{ is finite}\\
+        \Rightarrow&\exists u>v\in \mathbb{Z}^+,a^u=a^v\\
+        \Rightarrow&a^{u-v}=e\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 7}
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\exists x\in H\\
+        &x\times x=x^2\in H\\
+        \Rightarrow&\forall i\in \mathbb{Z}^+ ,x^i\in H\\
+        &H\text{ is finite}\\
+        \Rightarrow&\exists u>v\in \mathbb{Z}^+,x^u=x^v\\
+        \Rightarrow&x^{u-v}=e\\
+        &u-v\in \mathbb{Z}^+ \\
+        &e=x^{u-v}\in\mathbb{Z}^+ \\
+        &x\times x^{-1}=e\\
+        &x\times x^{-1}=x^{u-v}\\
+        \Rightarrow&x^{-1}=x^{u-v-1}\in \mathbb{Z}^+ \\
+        &\exists x^a, x^b\in H, a,b\in\mathbb{Z}^+ \\
+        &x^a\times x^b=x^{a+_{u-v}b}\in H\\
+        \Rightarrow&H\text{ is closed}\\
+        \Rightarrow&H\text{ is a subgroup}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &H\coloneqq \{x^n|n\in\mathbb{Z} ^+\}\\
+        &H\text{ is infinite}\\
+        \Rightarrow&\nexists u,v\in \mathbb{Z} ^+:x^u=x^v\\
+        \Rightarrow&e\notin H\\
+        \Rightarrow&H\text{ is not a group}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 8}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\exists a\in G\\
+        &g\ne e\\
+        &ag\ne ae\\
+        &ae=ea\\
+        \Rightarrow&ag\ne ea\\
+        &aga^{-1}\ne eaa^{-1}=e\\
+        &(aga^{-1})^{-1}=ag^{-1}a^{-1}=aga^{-1}\\
+        &g\text{ is the unique element that equals to inverse other than }e\\
+        \Rightarrow&aga^{-1}=g\\
+        &ag=ga\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 9}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Closure}:\\
+        &\exists a_1,b_1,a_2,b_2\in\mathbb{Z} \\
+        &x\coloneqq a_1m+b_1n,y\coloneqq a_2m+b_2n\\
+        &x,y\in H\\
+        &x+y=a_1m+b_1n+a_2m+b_2n=(a_1+a_2)m+(b_1+b_2)n\\
+        &a_1+a_2\in\mathbb{Z} ,b_1+b_2\in\mathbb{Z} \\
+        \Rightarrow&x+y\in H\\
+        &\text{Identity}:\\
+        &x+e=x\\
+        &a_1m+b_1n+e=a_1m+b_1n\\
+        \Rightarrow&e=0=0m+0n\in H\Leftarrow0\in\mathbb{Z} \\
+        &\text{Inverse}:\\
+        &x+x^{-1}=e\\
+        &a_1m+b_1n+x^{-1}=0\\
+        &x^{-1}=-a_1m-b_1n=-x\in H\Leftarrow -a_1,-b_1\in \mathbb{Z} \\
+        \Rightarrow&H_{m,n}\text{ is a subgroup}
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose }K\text{ is a subgroup of }\langle\mathbb{Z} ,+\rangle:m,n\in K\\
+        &0=0m+0n\in K\leftarrow K\text{ is a subgroup}\\
+        &m\in K\implies m+m=2m\in K\land -m\in K\leftarrow K\text{ is a subgroup}\\
+        &\text{By induction}:am\in K,a\in\mathbb{Z}\\
+        &\text{By the same method}:bn\in K,b\in\mathbb{Z} \\
+        \Rightarrow&am+bn\in K,a,b\in\mathbb{Z} \leftarrow K\text{ is a subgroup, closed under operation}\\
+        &\{am+bn,a,b\in\mathbb{Z} \}\text{ is generated only by }m,n\text{ and property of identity, inverse and closure under operation}\\
+        \Rightarrow&K\geqslant \{am+bn,a,b\in\mathbb{Z} \}\\
+        \Rightarrow&H_{m,n}\leqslant K\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}

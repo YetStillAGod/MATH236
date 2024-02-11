@@ -1,0 +1,447 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Problem 1}
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a\coloneqq (0,1)\\
+        &b\coloneqq (1,5)\\
+        \Rightarrow &f(x)\coloneqq \frac{y_b-y_a}{x_b-x_a}x+(y_a-\frac{y_b-y_a}{x_b-x_a} x_a)\\
+        \Rightarrow &f=4x+1\\
+        &f(x_1)=f(x_2)\\
+        \Rightarrow &4x_1+1=4x_2+1\\
+        \Rightarrow &x_1=x_2\\
+        \Rightarrow &f\text{ is one-to-one}\\
+        &\forall y\in[1,5],\exists x\in[0,1]:x=\frac{y-1}{4}\\
+        \Rightarrow &f\text{ is onto}\\
+        \Rightarrow &f \text{ is bijective}\\
+        \Rightarrow &|[0,1]|=|[1,5]|\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a\coloneqq (2,6)\\
+        &b\coloneqq (4,26)\\
+        \Rightarrow &f(x)\coloneqq \frac{y_b-y_a}{x_b-x_a}x+(y_a-\frac{y_b-y_a}{x_b-x_a} x_a)\\
+        \Rightarrow &f=10x-14\\
+        &f(x_1)=f(x_2)\\
+        \Rightarrow &10x_1-14=10x_2-14\\
+        \Rightarrow &x_1=x_2\\
+        \Rightarrow &f\text{ is one-to-one}\\
+        &\forall y\in(6,26),\exists x\in(2,4):x=\frac{y+14}{10}\\
+        \Rightarrow &f\text{ is onto}\\
+        \Rightarrow &f \text{ is bijective}\\
+        \Rightarrow &|(2,4)|=|(6,26)|\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a\coloneqq (a,c)\\
+        &b\coloneqq (b,d)\\
+        \Rightarrow &f(x)\coloneqq \frac{y_b-y_a}{x_b-x_a}x+(y_a-\frac{y_b-y_a}{x_b-x_a} x_a)\\
+        \Rightarrow &f=\frac{d-c}{b-a}x+(c-\frac{d-c}{b-a}a)\\
+        &f(x_1)=f(x_2)\\
+        \Rightarrow &\frac{d-c}{b-a}x_1+(c-\frac{d-c}{b-a}a)=\frac{d-c}{b-a}x_1+(c-\frac{d-c}{b-a}a)\\
+        \Rightarrow &x_1=x_2\\
+        \Rightarrow &f\text{ is one-to-one}\\
+        &\forall y\in(c,d],\exists x\in(a,b]:x=\frac{y-c+\frac{d-c}{b-a}a}{\frac{d-c}{b-a}}\\
+        \Rightarrow &f\text{ is onto}\\
+        \Rightarrow &f \text{ is bijective}\\
+        \Rightarrow &|(a,b]|=|(c,d]|\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &f :\mathbb{R} \rightarrow (-\frac{\pi}{2},\frac{\pi}{2})\\
+        &f(x)\coloneqq \arctan(x)\\
+        &f(x_1)=f(x_2)\\
+        \Rightarrow&\arctan(x_1)=\arctan(x_2)\\
+        \Rightarrow&\tan\arctan(x_1)=\tan\arctan(x_2)\\
+        \Rightarrow&x_1=x_2\\
+        \Rightarrow&f\text{ is one-to-one}\\
+        &\forall y\in(-\frac{\pi}{2},\frac{\pi}{2}),\exists x\in\mathbb{R} :x=\tan(y)\\
+        \Rightarrow& f\text{ is onto}\\
+        \Rightarrow&f\text{ is bijective}\\
+        \Rightarrow&|\mathbb{R} |=|(-\frac{\pi}{2},\frac{\pi}{2})|\\
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        &g :(-\frac{\pi}{2},\frac{\pi}{2}) \rightarrow (0,1)\\
+        &g(x)\coloneqq \frac{1}{\pi}x+\frac{1}{2}\\
+        &g(x_1)=g(x_2)\\
+        \Rightarrow&\frac{1}{\pi}x_1+\frac{1}{2}=\frac{1}{\pi}x_2+\frac{1}{2}\\
+        \Rightarrow&x_1=x_2\\
+        \Rightarrow&g\text{ is one-to-one}\\
+        &\forall y\in(0,1),\exists x\in(-\frac{\pi}{2},\frac{\pi}{2}) :x=(y-\frac{1}{2})\pi\\
+        \Rightarrow& g\text{ is onto}\\
+        \Rightarrow&g\text{ is bijective}\\
+        \Rightarrow&|(-\frac{\pi}{2},\frac{\pi}{2})|=|(0,1)|\\
+        \Rightarrow&|\mathbb{R} |=|(0,1)|\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 3}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Numbers of subsets of }A\text{ is the size of the power set of }A\\
+        &|\wp(A)|=2^4=16\\
+        \Rightarrow& \text{Numbers of subsets of }A=16\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &1\text{ partition}:\\
+        &\{a,b,c,d\}\\
+        &2\text{ partitions}:\\
+        &\{a\},\{b,c,d\}\\
+        &\{b\},\{a,c,d\}\\
+        &\{c\},\{a,b,d\}\\
+        &\{d\},\{a,b,c\}\\
+        &\{a,b\},\{c,d\}\\
+        &\{a,c\},\{b,d\}\\
+        &\{a,d\},\{b,c\}\\
+        &3\text{ patitions}:\\
+        &\{a\},\{b\},\{c,d\}\\
+        &\{a\},\{c\},\{b,d\}\\
+        &\{a\},\{d\},\{b,c\}\\
+        &\{b\},\{c\},\{a,d\}\\
+        &\{b\},\{d\},\{a,c\}\\
+        &\{c\},\{d\},\{a,b\}\\
+        &4\text{ partitions}:\\
+        &\{a\},\{b\},\{c\},\{d\}\\
+        \Rightarrow&\text{Total numbers are }15\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+For each of the values in the domain, there are four possible values in the codomain to match, each choice for the element can produce a unique function, so there are $4^4=256$ distinct functions mapping from $A$ to $A$.
+
+~
+
+\subsection*{Question d}
+
+~
+
+The first element has 4 values to choose from, for the second elment, there are only 3 images to choosse from. By induction and multiplication principle, the number of all possible injective functions mapping from $A$ to $A$ is $4\times3\times2\times1=24$.
+
+~
+
+\subsection*{Question e}
+
+~
+
+The relations of $A$ must be a subset of $A\times A$. $|A \times A|=4^2=16$ And the number of the subsets in $A\times A$ is the size of the power set of $A\times A$. That is: $|\wp(A\times A)|=2^{16}=65536$
+
+~
+
+\subsection*{Question f}
+
+~
+
+For every element that can form an equivalence relation in $A$, they can form a cell in $A$. This means that every kind of equivalence relation in $A$ is a type of partition in $A$, and this correspondence is bijective. Since there are 15 partitions in $A$, there are 15 equivalence relations in $A$.
+
+\newpage
+
+\section*{Problem 4}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &m\geqslant n\\
+        \Rightarrow&m\lnot \mathcal{R} n\\
+        &n\mathcal{R}m\\
+        \Rightarrow&\mathcal{R}\text{ is not symmetric}\\
+        &m=m\\
+        \Rightarrow&m\lnot \mathcal{R} m\\
+        \Rightarrow&\mathcal{R}\text{ is not reflexive}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &z=z\coloneqq0\\
+        \Rightarrow&zz=0\\
+        \Rightarrow&z\lnot \mathcal{R} z\\
+        \Rightarrow&\mathcal{R}\text{ is not reflexive}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &m=m\\
+        \Rightarrow&|m|=|m|\\
+        \Rightarrow&m\mathcal{R} m\\
+        \Rightarrow&\mathcal{R} \text{ is reflexive}\\
+        &\text{Suppose}:|m|=|n|\\
+        \Rightarrow&m\mathcal{R} n\\
+        &\text{Also}:|n|=|m|\\
+        \Rightarrow&n\mathcal{R} m\\
+        \Rightarrow&\mathcal{R} \text{ is symmetric}\\
+        &\text{Suppose}:|m|=|n|\land|n|=|p|\\
+        \Rightarrow&m\mathcal{R} n\land n\mathcal{R} p\\
+        &|m|=|n|\land|n|=|p|\\
+        \Rightarrow&|m|=|p|\\
+        \Rightarrow&m\mathcal{R} p\\
+        \Rightarrow&\mathcal{R} \text{ is transitive}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &|z-z|<1\\
+        \Rightarrow&z\lnot\mathcal{R}z\\
+        \Rightarrow&\mathcal{R}\text{ is not reflexive}\\
+        &\text{suppose}|z-w|\geqslant 1\land|w-y|\geqslant 1\\
+        \Rightarrow&z\mathcal{R}w\land w\mathcal{R}y\\
+        &z\coloneqq 5\land w\coloneqq-1\land y\coloneqq4.5\\
+        \Rightarrow&|z-w|\geqslant 1\land|w-y|\geqslant 1\land|z-y|=0.5<1\\
+        \Rightarrow&z\lnot\mathcal{R}y\\
+        \Rightarrow&\mathcal{R}\text{ is not transitive}\\
+    \end{split}
+\end{equation*}
+
+\subsection*{Question e}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\exists A,B,C\in \text{FS}(\mathbb{N} )\\
+        &|A|=|A|\\
+        \Rightarrow&A\mathcal{R} A\\
+        \Rightarrow&\mathcal{R} \text{ is reflexive}\\
+        &\text{Suppose}:|A|=|B|\\
+        \Rightarrow&A\mathcal{R}B\\
+        &|B|=|A|\leftarrow |A|=|B|\\
+        \Rightarrow&B\mathcal{R}A\\
+        \Rightarrow&\mathcal{R}\text{ is symmetric}\\
+        &\text{Suppose}:|A|=|B|\land|B|=|C|\\
+        \Rightarrow&A\mathcal{R}B\land B\mathcal{R}C\\
+        &|A|=|C|\leftarrow |A|=|B|\land|B|=|C|\\
+        \Rightarrow&A\mathcal{R}C\\
+        \Rightarrow&\mathcal{R}\text{ is transitive}\\
+    \end{split}
+\end{equation*}
+
+\subsection*{Question f}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &f(1)=f(1)\\
+        \Rightarrow&f\mathcal{R} f\\
+        \Rightarrow&\mathcal{R}\text{ is reflexive}\\
+        &\text{Suppose}:f(1)=g(1)\\
+        \Rightarrow&f\mathcal{R}g\\
+        &g(1)=f(1)\leftarrow f(1)=g(1)\\
+        \Rightarrow&g\mathcal{R}f\\
+        \Rightarrow&\mathcal{R}\text{ is symmetric}\\
+        &\text{Suppose}:f(1)=g(1)\land g(1)=h(1)\\
+        \Rightarrow&f\mathcal{R}g\land g\mathcal{R}h\\
+        &f(1)=h(1)\leftarrow f(1)=g(1)\land g(1)=h(1)\\
+        \Rightarrow &f\mathcal{R}h\\
+        \Rightarrow&\mathcal{R}\text{ is transitive}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 5}
+
+~
+
+\subsection*{Question a}
+\begin{equation*}
+    \begin{split}
+        &a-a=0=0\times n\\
+        \Rightarrow&a\sim a\\
+        \Rightarrow&\sim\text{ is reflexive}\\
+        &\text{Suppose}:a-b=q\times n\\
+        \Rightarrow&a\sim b\\
+        &b-a=-q\times n\leftarrow a-b=q\times n\\
+        &-q\in\mathbb{Z} \\
+        \Rightarrow&b\sim a\\
+        \Rightarrow&\sim\text{ is symmetric}\\
+        &\text{Suppose}:a-b=q\times n\land b-c=p\times n\\
+        \Rightarrow&a\sim b\land b\sim c\\
+        &a-c=(p+q)\times n\\
+        &p+q\in\mathbb{Z} \\
+        \Rightarrow&a\sim c\\
+        \Rightarrow&\sim\text{ is transitive}\\
+        \Rightarrow&\sim\text{ is an equivalence relation}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{There are 4 cells for }n=4\\
+        &\text{class of remainder }0:\{\cdots ,-4,0,4,\cdots\}=\{n|n=4k,k\in\mathbb{Z} \}\\
+        &\text{class of remainder }1:\{\cdots ,-3,1,5,\cdots\}=\{n|n=4k+1,k\in\mathbb{Z} \}\\
+        &\text{class of remainder }2:\{\cdots ,-2,2,6,\cdots\}=\{n|n=4k+2,k\in\mathbb{Z} \}\\
+        &\text{class of remainder }3:\{\cdots ,-1,3,7,\cdots\}=\{n|n=4k+3,k\in\mathbb{Z} \}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Problem 6}
+
+~
+
+\subsection*{Question a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &S=\{a,b,c\}\\
+        &R=\{(a,a),(b,b),(c,c),(a,b),(b,a)\},\text{relation denoted as }=\\
+        &\{(a,a),(b,b),(c,c)\}\subseteq R\\
+        \Rightarrow&R\text{ is reflexive}\\
+        &\{(a,b),(b,a)\}\implies a= b\rightarrow b= a\\
+        \Rightarrow&R\text{ is symmetric}\\
+        &\text{In order for } a=c,\text{ we need }a=b\land b=c,{ but }b\ne c\\
+        \Rightarrow &R\text{ is transitive}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &S=\{a,b,c\}\\
+        &R=\{(a,a),(b,b),(c,c),(a,b),(b,c),(a,c)\},\text{relation denoted as }=\\
+        &\{(a,a),(b,b),(c,c)\}\subseteq R\\
+        \Rightarrow&R\text{ is reflexive}\\
+        &\{(a,b),(b,c),(a,c)\}\subseteq R\\
+        \Rightarrow&a=b\land b=c\rightarrow a=c\\
+        \Rightarrow&R\text{ is transitive}\\
+        &(b,a)\text{ is not an element in }R \text{ whereas }(a,b)\in R\\
+        \Rightarrow&a=b\nrightarrow b=a\\
+        \Rightarrow&R\text{ is not symmetric}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Question c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &S=\{a,b,c\}\\
+        &R=\{(a,b),(b,a),(b,c),(c,b),(a,c),(c,a)\},\text{relation denoted as }=\\
+        &\{(a,b),(b,a)\}\implies a= b\rightarrow b= a\\
+        &\{(b,c),(c,b)\}\implies b= c\rightarrow c= b\\
+        &\{(a,c),(c,a)\}\implies a= c\rightarrow c= a\\
+        \Rightarrow&R\text{ is symmetric}\\
+        &\{(a,b),(b,c),(a,c)\}\in R\implies a=b\land b=c\implies c=a\\
+        &\text{ vice versa}\leftarrow R\text{ is symmetric}\\
+        \Rightarrow&R\text{ is transitive}\\
+        &\{(a,a),(b,b),(c,c)\}\nsubseteq R\\
+        \Rightarrow& a\ne a\land b\ne b\land c\ne c\\
+        \Rightarrow&R\text{ is not reflexive}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}

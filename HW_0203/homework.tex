@@ -1,0 +1,526 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{There are }n\text{ inputs to }n\text{ outputs}\\
+        \Rightarrow&\text{Number of combinations}:n^2\\
+        \Rightarrow&\text{Number of binary operation}:n^{n^2}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{There are }n\text{ inputs to }n-1\text{ outputs}\\
+        \Rightarrow&\text{Number of combinations}:\frac{n(n-1)}{2}\\
+        \Rightarrow&\text{Also add the ordered pairs}x=y:\frac{n(n-1)}{2}+n=\frac{n(n+1)}{2}\\
+        \Rightarrow&\text{Number of binary operation}:n^{\frac{n(n+1)}{2}}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(b*d)*a=b*(d*a)\\
+        &c*a=b*d\\
+        &c*a=c\\
+        &(b*d)*b=b*(d*b)\\
+        &c*b=b*b\\
+        &c*b=b\\
+        &(b*d)*c=b*(d*c)\\
+        &c*c=b*c\\
+        &c*c=c\\
+        &(b*d)*d=b*(d*d)\\
+        &c*d=b*a\\
+        &c*d=b\\
+        \Rightarrow&\begin{array}{c|cccc}
+            *&a&b&c&d\\
+            \hline
+            a&a&b&c&d\\
+            b&b&b&c&c\\
+            c&c&b&c&b\\
+            d&d&b&c&a\\
+        \end{array}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a*b\\
+        =&5ab\\
+        =&5ba\\
+        =&b*a\leftarrow\text{commutative}\\
+        &a*(b*c)\\
+        =&a*(5bc)\\
+        =&5a(5bc)\\
+        =&25abc\\
+        &(a*b)*c\\
+        =&(5ab)*c\\
+        =&5\times5abc\\
+        =&25abc\\
+        =&a*(b*c)\leftarrow\text{associative}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a*b\\
+        =&5ab-1\\
+        =&5ba-1\\
+        =&b*a\leftarrow\text{commutative}\\
+        &a*(b*c)\\
+        =&a*(5bc-1)\\
+        =&5a(5bc-1)-1\\
+        =&25abc-5a-1\\
+        &(a*b)*c\\
+        =&(5ab-1)*c\\
+        =&5\times(5ab-1)c-1\\
+        =&25abc-5c-1\\
+        \ne&a*(b*c)\leftarrow\text{not associative}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &a*b=a-b+1\\
+        &b*a=b-a+1\\
+        \Rightarrow&a*b\ne b*a\\
+        \Rightarrow&\text{not commutative}\\
+        &a*(b*c)=a*(b-c+1)=a-(b-c+1)+1=a-b+c\\
+        &(a*b)*c=(a-b+1)*c=a-b+1-c+1=a-b-c+2\\
+        \Rightarrow&a*(b*c)\ne (a*b)*c\\
+        \Rightarrow&\text{not associative}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation}
+    \begin{split}
+        &a*b=3^{a+b}\\
+        &b*a=3^{b+a}\\
+        \Rightarrow&a*b=b*a\\
+        \Rightarrow&\text{commutative}\\
+        &a*(b*c)=a*(3^{b+c})=3^{a+3^{b+c}}\\
+        &(a*b)*c=(3^{a+b})*c=3^{3^{a+b}+c}\\
+        \Rightarrow&a*(b*c)\ne (a*b)*c\\
+        \Rightarrow&\text{not associative}\\
+    \end{split}
+\end{equation}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\langle A,*\rangle\coloneqq\begin{array}{c|cc}
+            *&a&b\\
+            \hline
+            a&b&a\\
+            b&a&a\\
+        \end{array}\\
+        &\text{The operation is commutative since it is symmetric along the diagonal}\\
+        &a*(a*b)=a*a=b\\
+        &(a*a)*b=b*b=a\\
+        \Rightarrow&a*(a*b)\ne(a*a)*b\\
+        \Rightarrow&\langle A,*\rangle\text{ is not associative}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\langle G,*\rangle\coloneqq\begin{array}{c|ccc}
+            *&a&b\\
+            \hline
+            a&a&b\\
+            b&b&a\\
+        \end{array}\\
+        \Rightarrow&a^2\ne b\land b^2\ne b\\
+        \Rightarrow&\nexists x\in G:x^2=b\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose}:x\in G \text{ appears twice in one row}\\
+        &u*v\coloneqq x\land u*w\coloneqq x,v\ne w\in G\\
+        \Rightarrow&u*v=u*w\\
+        &u^{-1}*(u*v)=u^{-1}*(u*w)\\
+        &(u^{-1}*u)*v=(u^{-1}*u)*w\\
+        &e*v=e*w\\
+        &v=w\nLeftrightarrow v\ne w\\
+        \Rightarrow&\forall x\in G\text{ appears at most once in one row}\\
+        &\text{Since each row has }|G| \text{ different outputs for }|G|\text{ different inputs}\\
+        \Rightarrow&\text{There must exactly one element in each row }\\
+        &\text{The logic is the same for the proposition in column.}
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &a*e=a=e*a\\
+        &a*e=a+e\\
+        \Rightarrow&a+e=a\\
+        \Rightarrow&e=0\\
+        &\text{inverse}:\\
+        &a*a^{-1}=e\\
+        \Rightarrow&a+a^{-1}=0\\
+        \Rightarrow&a^{-1}=-a\\
+        &\text{associative}:\\
+        &a*(b*c)\\
+        =&a*(b+c)\\
+        =&a+(b+c)\\
+        =&(a+b)+c\\
+        =&(a*b)*c\\
+        &\text{closure}:\\
+        &\exists a,b\in G\\
+        \Rightarrow&a\coloneqq 3m, b\coloneqq 3n\\
+        &a*b\\
+        =&a+b\\
+        =&3m+3n\\
+        =&3(m+n)\in G\\
+        \Rightarrow&\langle G,*\rangle\text{ is a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &a*e\\
+        =&a+2e\\
+        =&a\\
+        \Rightarrow&e=0\\
+        &e*a\\
+        =&e+2a\\
+        =&a\\
+        \Rightarrow&e=-a\\
+        &e=0\nLeftrightarrow  e=-a\\
+        \Rightarrow&\text{There is no identity value for }*\\
+        \Rightarrow&\langle G,*\rangle\text{ is not a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 3}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &a*e\\
+        =&|ae|\\
+        &|ae|=a\\
+        &LHS\geqslant0\\
+        \Rightarrow&a<0\implies |ae|=a\text{ has no solution for }e\\
+        \Rightarrow&\langle G,*\rangle\text{ is not a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 4}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &a*e\\
+        =&ae\\
+        =&a\\
+        \Rightarrow&e=1=1+0\times \sqrt{2}\in G\\
+        &e*a=ea=a\\
+        &\text{inverse}:\\
+        &a*a^{-1}=e\\
+        \Rightarrow&a\cdot a^{-1}=1\\
+        \Rightarrow&a^{-1}=\frac{1}{a}\\
+        &\text{associative}:\\
+        &a*(b*c)\\
+        =&a*(bc)\\
+        =&abc\\
+        =&(ab)c\\
+        =&(a*b)*c\\
+        &\text{closure}:\\
+        &a\coloneqq a_1+a_2\sqrt{2},b\coloneqq b_1+b_2\sqrt{2}\\
+        &a*b\\
+        =&ab\\
+        =&(a_1+a_2\sqrt{2})(b_1+b_2\sqrt{2})\\
+        =&(a_1b_1+2a_2b_2)+(a_1b_2+b_1a_2)\sqrt{2}\in G\\
+        \Rightarrow&\langle G,*\rangle\text{ is a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 5}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &a*e\\
+        =&\sqrt{ae}\\
+        &\sqrt{ae}=a\\
+        \Rightarrow&e=a\\
+        \Rightarrow&\text{there cannot be an identity}\\
+        \Rightarrow&\langle G,*\rangle\text{ is not a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 6}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &A*E\\
+        =&AE\\
+        =&A\\
+        \Rightarrow&E=I_2\\
+        &\text{inverse}:\\
+        &A*A^{-1}=E\\
+        \Rightarrow&A\cdot A^{-1}=I_2\\
+        &A^{-1}\cdot A \cdot A^{-1}=A^{-1}\cdot I_2\\
+        &A^{-1}=A^{-1}\\
+        &\text{associative}:\\
+        &A*(B*C)\\
+        =&A*(BC)\\
+        =&ABC\\
+        =&(AB)C\\
+        =&(A*B)*C\\
+        &\text{closure}:\\
+        &C\coloneqq A*B\\
+        \Rightarrow&C=AB\\
+        &M_{a\times b}\times M_{b\times c}=M_{a\times c}\\
+        \Rightarrow&C\in M_{2\times 2}(\mathbb{R} )\\
+        \Rightarrow&\langle G,*\rangle\text{ is a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 7}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &A*E\\
+        =&AE\\
+        =&A\\
+        \Rightarrow&E=I_2\in G\\
+        &\text{inverse}:\\
+        &A*A^{-1}=E\\
+        \Rightarrow&A\cdot A^{-1}=I_2\\
+        &A^{-1}\cdot A \cdot A^{-1}=A^{-1}\cdot I_2\\
+        &A^{-1}=A^{-1}\\
+        &\text{associative}:\\
+        &A*(B*C)\\
+        =&A*(BC)\\
+        =&ABC\\
+        =&(AB)C\\
+        =&(A*B)*C\\
+        &\text{closure}:\\
+        &C\coloneqq A*B\\
+        \Rightarrow&C=AB\\
+        &\det(C)=\det(A)\det(B)\\
+        \Rightarrow&\det(C)=1\times 1=1\\
+        \Rightarrow&C\in G\\
+        \Rightarrow&\langle G,*\rangle\text{ is a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 8}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{identity value}:\\
+        &A*E\\
+        =&AE\\
+        =&A\\
+        \Rightarrow&E=I_2\in G\\
+        &\text{inverse}:\\
+        &A*A^{-1}=E\\
+        \Rightarrow&A\cdot A^{-1}=I_2\\
+        &A^{-1}\cdot A \cdot A^{-1}=A^{-1}\cdot I_2\\
+        &A^{-1}=A^{-1}\\
+        &\text{associative}:\\
+        &A*(B*C)\\
+        =&A*(BC)\\
+        =&ABC\\
+        =&(AB)C\\
+        =&(A*B)*C\\
+        &\text{closure}:\\
+        &A\coloneqq \begin{bmatrix}
+            1&0\\
+            1&-1\\
+        \end{bmatrix},B\coloneqq \begin{bmatrix}
+            2&1\\
+            -3&-2\\
+        \end{bmatrix}\\
+        &A^2=B^2=I_2\\
+        &C\coloneqq A*B\\
+        &C=AB=\begin{bmatrix}
+            2&1\\
+            5&3\\
+        \end{bmatrix}\ne I_2\\
+        \Rightarrow&\langle G,*\rangle\text{is not closed}\\
+        \Rightarrow&\langle G,*\rangle\text{is not a group}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 7}
+
+~
+
+\subsection*{Problem 1}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\exists a,b\in G\\
+        &a=a^{-1}\\
+        \Rightarrow&a^2=e\\
+        &c\coloneqq a*b\\
+        &\text{Consider}:a*b*b*a\\
+        &a*b*b*a\\
+        =&a*(b*b)*a\\
+        =&a*e*a\\
+        =&a*a\\
+        =&e\\
+        \Rightarrow&c*(b*a)=e\\
+        &c\text{ has only one inverse } a*b\\
+        \Rightarrow&a*b=b*a\\
+        \Rightarrow&\langle G,*\rangle\text{ is commutative}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{Suppose}: \forall a\ne e\in G,|G|=2n,n\in\mathbb{Z}^+:a\ne a^{-1}\\
+        &\forall a\ne b\in G:a,a^{-1},b,b^{-1}\text{ are all distinct}\leftarrow \text{properties of group}\\
+        \Rightarrow&\text{ Every }a\text{ and }a^{-1} \text{ can form a pair without repetition}\\
+        \Rightarrow&|G|=2n+1,n\in \mathbb{Z}^+\leftarrow e^{-1}=e\\
+        &|G|=2n+1\nLeftrightarrow |G|=2n\\
+        \Rightarrow&\exists a\ne e\in G:a^{-1}=a
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}
