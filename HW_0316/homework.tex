@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &\phi:A\times B\rightarrow B\times A\\
+        &\phi((a,b))=(b,a)\\
+        &\text{Homomorphism}:\\
+        &\exists a,a'\in A,b,b'\in B:\\
+        &\phi((a,b)(a',b'))=\phi(aa',bb')=(bb',aa')\\
+        &(bb',aa')=(b,a)(b',a')=\phi(a,b)\phi(a',b')\\
+        &\\
+        &\text{bijective}:\\
+        &\exists a,a'\in A,b,b'\in B:\phi(a,b)=\phi(a',b')\\
+        \Rightarrow&(b,a)=(b',a')\\
+        \Rightarrow&\begin{cases}
+            a=a'\\
+            b=b'\\
+        \end{cases}\\
+        \Rightarrow&(a,b)=(a',b')\\
+        \Rightarrow&\phi(a,b)=\phi(a',b')\implies (a,b)=(a',b')\\
+        \Rightarrow&\text{injective}\\
+        &|A\times B|=|B\times A|\\
+        \Rightarrow&\text{surjective since injective}\\
+        \Rightarrow&\text{bijective}\\
+        \Rightarrow&\text{isomorphism}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &|\mathbb{Z} _m\times\mathbb{Z} n|=\text{lcm}(m,n)\\
+        \Rightarrow&\text{lcm}(m,n)=mn\Leftrightarrow \gcd(m,n)=1\\
+        &|\mathbb{Z} _m\times\mathbb{Z} n|=mn\Leftrightarrow m,n\text{are relatively prime}\\
+        &\text{There is an element of order }mn\text{ in a group of order }mn\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\mathbb{Z} _2\times\mathbb{Z} _4\\
+        &|\mathbb{Z} _2\times\mathbb{Z} _4|=8\\
+        &2\times 4=8\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &\text{Klein-4}:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            \hline
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&e&a\\
+            c&c&b&a&e\\
+        \end{array}\\
+        &\mathbb{Z} _2\times\mathbb{Z} _2:\begin{array}{c|cccc}
+            \ast&e&a&b&c\\
+            \hline
+            e&e&a&b&c\\
+            a&a&e&c&b\\
+            b&b&c&e&a\\
+            c&c&b&a&e\\
+        \end{array}\\
+        \Rightarrow&\text{Klein-4}\cong\mathbb{Z} _2\times\mathbb{Z} _2\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem e}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\gcd(3,3)=3\ne1\\
+        \Rightarrow&\mathbb{Z} _3\times\mathbb{Z} _3\text{ is not cyclic}\\
+        &\gcd(3,5)=1\\
+        \Rightarrow&\mathbb{Z} _3\times\mathbb{Z} _5\text{ is cyclic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem f}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\mathbb{Z} _2\times\mathbb{Z} _6\text{ is not cyclic}\\
+        &\nexists n\in \mathbb{Z} :n^2=2\times6=12\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem g}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\mathbb{Z} _2\times\mathbb{Z} _2\\
+        &|\mathbb{Z} _2\times\mathbb{Z} _2|=4=2^2\\
+        &\mathbb{Z} _2\times\mathbb{Z} _2\text{ is not cyclic}\\
+    \end{split}
+\end{equation*}
+
+\subsection*{Problem h}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{ }
+    \end{split}
+\end{equation*}
+
+\end{document}
