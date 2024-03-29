@@ -1,0 +1,557 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{gensymb}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\exists G/H \text{ as a factor group} \Leftrightarrow H\unlhd G\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &G\text{ is abelian}\\
+        \Rightarrow&\forall H\text{ as a subgroup},H\unlhd G\\
+        \Rightarrow&G/H\text{ is a group}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &|G/N|=\infty\\
+        \Rightarrow&\text{There are infinitely many left cosets of }N\text{ in }G\\
+        \Rightarrow&|G|=\infty\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\forall G\text{ nonabelian}:\\
+        &G/\{e\}\text{ is abelian}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem e}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &\forall g\in G:gN\in G/N\\
+        &(gN)^a=g^aN\\
+        \Rightarrow&\exists n:g^n=g\leftarrow G\text{ is cyclic}\\
+        \Rightarrow&g^nN=gN\in G/N\\
+        \Rightarrow&G/N\text{ is cyclic}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem f}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{False}:\\
+        &\{e\}\text{ is abelian}\\
+        &G/\{e\}\text{ must be abelian}\\
+        &G\text{ does not need to be abelian}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem g}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &N\text{ is normal}\\
+        \Rightarrow&\forall g\in G,gN=Ng\\
+        \Rightarrow&gNg^{-1}=Ngg^{-1}=N\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem h}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &|H|=d\\
+        \Rightarrow&\forall h\in H,g\in G,(ghg^{-1})^d=gh^dg^{-1}=geg^{-1}=e\\
+        \Rightarrow&gHg^{-1}\text{ has the same order as }H\\
+        \Rightarrow&gHg^{-1}=H\text{ by assumption}\\
+        \Rightarrow&gH=Hg\\
+        &H\unlhd G\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem i}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\text{True}:\\
+        &\exists n\in H\cap K\\
+        \Rightarrow&\forall g\in G,gng^{-1}\in H\land gng^{-1}\in K\leftarrow H\unlhd G\land K\unlhd G\\
+        \Rightarrow&\forall g\in G,n\in H\cap K:gng^{-1}\in H\cap K\\
+        \Rightarrow&H\cap K\unlhd G\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &|\mathbb{Z} _9\times\mathbb{Z} _{35}|=9\times 35\\
+        &|\langle(3)\times(25)\rangle|=\frac{9}{\gcd(9,3)}\times\frac{35}{\gcd(35,25)}=3\times 7\\
+        \Rightarrow&|\mathbb{Z} _9\times\mathbb{Z} _{35}/\langle(3),(25)\rangle|\\
+        =&\frac{|\mathbb{Z} _9\times\mathbb{Z} _{35}|}{|\langle(3),(25)\rangle|}\\
+        =&\frac{9\times 35}{3\times 7}\\
+        =&15\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &|\mathbb{Z} _9\times\mathbb{Z} _{35}|=9\times 35\\
+        &\langle(0)\times(11)\rangle\text{ only affects}\mathbb{Z} _{35}\\
+        \Rightarrow&|\langle(0)\times(11)\rangle|=\frac{35}{\gcd(35,11)}=35\\
+        \Rightarrow&|\mathbb{Z} _9\times\mathbb{Z} _{35}/\langle(0)\times(11)\rangle|\\
+        =&\frac{9\times 35}{35}\\
+        =&9\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\langle(1,1)\rangle\text{ generates the whole group}\\
+        \Rightarrow&|\mathbb{Z} _{19}\times\mathbb{Z} _{24}/\langle(1,1)\rangle|=1\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &|\mathbb{Z} _2\times\mathbb{Z} _4|=8\\
+        &|\langle(0,2)\rangle|=2\\
+        \Rightarrow&|\mathbb{Z} _2\times\mathbb{Z} _4/\langle(0,2)\rangle|=4\\
+        &\mathbb{Z} _2\text{ is untouched}\\
+        \Rightarrow&\mathbb{Z} _2\text{ remains the same}\\
+        \Rightarrow&\mathbb{Z} _2\times\mathbb{Z} _4/\langle(0,2)\rangle\cong \mathbb{Z} _2\times \mathbb{Z} _2\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &\langle(3,0,0)\rangle\text{ is infinite in }\mathbb{Z} \times\mathbb{Z} \times\mathbb{Z} _4\\
+        &\mathbb{Z} _4\text{ remains untouched}\\
+        \Rightarrow&\mathbb{Z} \times\mathbb{Z} \times\mathbb{Z} _4/\langle(3,0,0)\rangle\cong \mathbb{Z}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(1,0)\in\mathbb{Z} \times\mathbb{Z} \\
+        &(1,0)\notin \langle(2,2)\rangle\\
+        \Rightarrow&\forall m, (m,0)\notin \langle(2,2)\rangle\\
+        \Rightarrow&\mathbb{Z} \times\mathbb{Z} /\langle(2,2)\rangle\cong \mathbb{Z} \\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(1,0)\in \mathbb{Z} \times\mathbb{Z} \\
+        &(1,0)\notin \langle(1,2)\rangle\\
+        \Rightarrow&\forall m, (m,0)\notin \langle(1,2)\rangle\\
+        \Rightarrow&\mathbb{Z} \times\mathbb{Z} /\langle(1,2)\rangle\cong \mathbb{Z} \\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &10+\langle8\rangle\\
+        =&2+\langle8\rangle\\
+        &4(2+\langle8\rangle)\\
+        =&8+\langle8\rangle\\
+        =&\langle8\rangle\\
+        \Rightarrow&\text{ord}(10+\langle8\rangle)=4\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(1,7)+\langle(1,1)\rangle\\
+        &(2,14)+\langle(1,1)\rangle=(2,5)+(2,14)+\langle(1,1)\rangle\\
+        &(3,21)+\langle(1,1)\rangle=(3,3)+\langle(1,1)\rangle=\langle(1,1)\rangle\\
+        \Rightarrow&\text{ord}((1,7)+\langle(1,1)\rangle)=3\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(2,3)\in\mathbb{Z} _4\times\mathbb{Z} _8\\
+        &|(2,3)|=\text{lcm}(|\langle2\rangle|,|\langle3\rangle|)=8\\
+        \Rightarrow&\text{ord}((2,3)+\langle(1,2)\rangle)|8\\
+        &\text{ord}((2,3)+\langle(1,2)\rangle)=1,2,4,8\\
+        &(2,3)+\langle(1,2)\rangle\ne\langle(1,2)\rangle\\
+        &2(2,3)+\langle(1,2)\rangle=(0,6)+\langle(1,2)\rangle\ne\langle(1,2)\rangle\\
+        &4(2,3)+\langle(1,2)\rangle=(0,4)+\langle(1,2)\rangle\ne\langle(1,2)\rangle\\
+        &8(2,3)+\langle(1,2)\rangle=(0,0)+\langle(1,2)\rangle=\langle(1,2)\rangle\\
+        \Rightarrow&\text{ord}((2,3)+\langle(1,2)\rangle)=8\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &(3,2)\in\mathbb{Z} _4\times\mathbb{Z} _8\\
+        &|(3,2)|=\text{lcm}(|\langle3\rangle|,|\langle2\rangle|)=4\\
+        \Rightarrow&\text{ord}((3,2)+\langle(1,2)\rangle)|4\\
+        &\text{ord}((3,2)+\langle(1,2)\rangle)=1,2,4\\
+        &(3,2)+\langle(1,2)\rangle\ne\langle(1,2)\rangle\\
+        &2(3,2)+\langle(1,2)\rangle=(2,4)+\langle(1,2)\rangle=\langle(1,2)\rangle\\
+        \Rightarrow&\text{ord}((3,2)+\langle(1,2)\rangle)=2\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\subsection*{Problem a}
+
+\begin{equation*}
+    \begin{split}
+        &S_3=\{Id,(1,2),(1,3),(2,3),(1,2,3),(1,3,2)\}\\
+        &G_1=\{g\in G,g\cdot1=1\}\\
+        \Rightarrow&G_1=\{Id,(2,3)\}\\
+        &G_2=\{g\in G,g\cdot2=2\}\\
+        \Rightarrow&G_2=\{Id,(1,3)\}\\
+        &G_3=\{g\in G,g\cdot3=3\}\\
+        \Rightarrow&G_3=\{Id,(1,2)\}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &X_{Id}=\{1,2,3\}\\
+        &X_{(1,2)}=\{3\}\\
+        &X_{(1,3)}=\{2\}\\
+        &X_{(2,3)}=\{1\}\\
+        &X_{(1,2,3)}=X_{(1,3,2)}=\emptyset\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &Id\cdot 1=1\\
+        &(1,2)\cdot 1=2\\
+        &(1,3)\cdot 1=3\\
+        &G\cdot 1=\{1,2,3\}=X\\
+        &Id\cdot 2=2\\
+        &(1,2)\cdot 2=1\\
+        &(2,3)\cdot 2=3\\
+        &G\cdot 2=\{1,2,3\}=X\\
+        &Id\cdot 3=3\\
+        &(1,3)\cdot 3=1\\
+        &(2,3)\cdot 3=2\\
+        &G\cdot 3=\{1,2,3\}=X\\
+        \Rightarrow&\forall x\in X,G\cdot x=X\\
+        \Rightarrow&\text{There is only one orbit}\\
+        \Rightarrow&\text{The action is transitive}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &X=\{G,\{e\},\langle\rho\rangle,\langle\rho^2\rangle,\langle\tau\rangle,\langle\tau\rho\rangle,\langle\tau\rho^2\rangle,\langle\tau\rho^3\rangle,\langle\rho^2,\tau\rangle,\langle\rho^2,\tau\rho\rangle\}\\
+        &\text{center of }D_4:e,\rho^2\\
+        &\forall g\in G, \rho g\rho^{-1}\in G\\
+        \Rightarrow&G\in X_\rho\\
+        &\rho e\rho^{-1}=e\\
+        \Rightarrow&\{e\}\in X_\rho\\
+        &\forall h\in\langle \rho\rangle,h=\rho^n,n\in\{1,2,3,4\},\rho^4=e\\
+        &\rho h\rho^{-1}=\rho \rho^n\rho^{-1}=\rho^n=h\in \langle \rho\rangle\\
+        \Rightarrow&\langle \rho\rangle\in X_\rho\\
+        &\rho\rho^2\rho^{-1}=\rho^2\\
+        \Rightarrow&\langle\rho^2\rangle\in X_\rho\\
+        &\rho\tau\rho^{-1}=\tau\rho^3\rho^{-1}=\tau\rho^2\notin\langle\tau\rangle\\
+        \Rightarrow&\langle\tau\rangle\notin X_\rho\\
+        &\rho\tau\rho\rho^{-1}=\rho\tau=\tau\rho^3\notin\langle\tau\rho\rangle\\
+        \Rightarrow&\langle\tau\rho\rangle\notin X_\rho\\
+        &\rho\tau\rho^2\rho^{-1}=\rho\tau\rho=\tau\rho^3\rho=\tau\notin \langle\tau\rho^2\rangle\\
+        \Rightarrow&\langle\tau\rho^2\rangle\notin X_\rho\\
+        &\rho\tau\rho^3\rho^{-1}=\rho\tau\rho^2=\tau\rho^3\rho^2=\tau\rho\notin\langle\tau\rho^3\rangle\\
+        \Rightarrow&\langle\tau\rho^3\rangle\notin X_\rho\\
+        &\rho\tau\rho^{-1}=\tau\rho^2\in\langle\rho^2,\tau\rangle\\
+        &\rho\tau\rho^2\rho^{-1}=\tau\in\langle\rho^2,\tau\rangle\\
+        &e,\rho^2\text{are centers}\\
+        \Rightarrow&\langle\rho^2,\tau\rangle\in X_\rho\\
+        &\rho\tau\rho\rho^{-1}=\tau\rho^3\in\langle\rho^2,\tau\rho\rangle\\
+        &\rho\tau\rho^3\rho^{-1}=\tau\rho\in\langle\rho^2,\tau\rho\rangle\\
+        &e,\rho^2\text{are centers}\\
+        \Rightarrow&\langle\rho^2,\tau\rho\rangle\in X_\rho\\
+        \Rightarrow&X_\rho=\{G,\{e\},\langle\rho\rangle,\langle\rho^2\rangle,\langle\rho^2,\tau\rangle,\langle\rho^2,\tau\rho\rangle\}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &X=\{G,\{e\},\langle\rho\rangle,\langle\rho^2\rangle,\langle\tau\rangle,\langle\tau\rho\rangle,\langle\tau\rho^2\rangle,\langle\tau\rho^3\rangle,\langle\rho^2,\tau\rangle,\langle\rho^2,\tau\rho\rangle\}\\
+        &\forall g\in G,g=\tau^m\rho^n,m\in\{0,1\},n\in\{0,1,2,3\}\\
+        &\text{orb}(G)=\{G\}\\
+        &\text{center of }D_4:e,\rho^2\\
+        \Rightarrow&\text{orb}(\{e\})=\{\{e\}\}\\
+        &\text{orb}(\langle\rho^2\rangle)=\{\langle\rho^2\rangle\}\\
+        &\forall \rho^k\in\langle\rho\rangle:\\
+        &\tau^m\rho^n\rho^k(\tau^m\rho^n)^{-1}\\
+        =&\tau^m\rho^n\rho^k\rho^{-n}\tau^{-m}\\
+        =&\tau^m\rho^k\tau^{-m}\\
+        =&\rho^k\tau^{-2m}\\
+        =&\rho^k\\
+        \Rightarrow&\text{orb}(\langle\rho\rangle)=\{\langle\rho\rangle\}\\
+        &\forall \tau^k\in\langle\tau\rangle:\\
+        &\tau^m\rho^n\tau^k(\tau^m\rho^n)^{-1}\\
+        =&\tau^m\rho^n\tau^k\rho^{-n}\tau^{-m}\\
+        =&\rho^{-n}\tau^{-m}\tau^k\tau^m\rho^n\\
+        =&\rho^{-n}\tau^k\rho^n\\
+        =&\tau^k\rho^{2n}\\
+        &n\text{ is odd}:\tau^m\rho^n\tau^k(\tau^m\rho^n)^{-1}\in\langle\tau\rho^2\rangle\\
+        &n\text{ is even}:\tau^m\rho^n\tau^k(\tau^m\rho^n)^{-1}\in\langle\tau\rangle\\
+        \Rightarrow&\text{orb}(\langle\tau\rangle)=\{\langle\tau\rangle,\langle\tau\rho^2\rangle\}\\
+        &\forall \tau^k\rho^k\in\langle\tau\rho\rangle:\\
+        &\tau^m\rho^n \tau^k\rho^k(\tau^m\rho^n)^{-1}\\
+        =&\tau^m\rho^n \tau^k\rho^k\rho^{-n}\tau^{-m}\\
+        =&\tau^{m-k}\rho^{k-2n}\tau^{-m}\\
+        =&\tau^{2m-k}\rho^{2n-k}\\
+        =&\tau^{-k}\rho^{2n-k}\\
+        &n\text{ is odd}:\tau^m\rho^n \tau^k\rho^k(\tau^m\rho^n)^{-1}\in\langle\tau\rho\rangle\\
+        &n\text{ is even}:\tau^m\rho^n \tau^k\rho^k(\tau^m\rho^n)^{-1}\in\langle\tau\rho^3\rangle\\
+        \Rightarrow&\text{orb}(\langle\tau\rho\rangle)=\{\langle\tau\rho\rangle,\langle\tau\rho^3\rangle\}\\
+    \end{split}
+\end{equation*}
+
+\begin{equation*}
+    \begin{split}
+        &\forall \tau^p\rho^{2q}\in\langle\rho^2,\tau\rangle:\\
+        &\tau^m\rho^n\tau^p\rho^{2q}(\tau^m\rho^n)^{-1}\\
+        =&\tau^m\rho^n\tau^p\rho^{2q}\rho^{-n}\tau^{-m}\\
+        =&\tau^{m-p}\rho^{2q-2n}\tau^{-m}\\
+        =&\tau^{-p}\rho^{2n-2q}\in\langle\rho^2,\tau\rangle\\
+        \Rightarrow&\text{orb}(\langle\rho^2,\tau\rangle)=\{\langle\rho^2,\tau\rangle\}\\
+        &\forall\tau^p\rho^{2q+p}\in\langle\rho^2,\tau\rho\rangle:\\
+        &\tau^m\rho^n\tau^p\rho^{2q+p}(\tau^m\rho^n)^{-1}\\
+        =&\tau^m\rho^n\tau^p\rho^{2q+p}\rho^{-n}\tau^{-m}\\
+        =&\tau^{m-p}\rho^{2q-2n+p}\tau^{-m}\\
+        =&\tau^{-p}\rho^{-p+2n-2q}\in\langle\rho^2,\tau\rho\rangle\\
+        \Rightarrow&\text{orb}(\langle\rho^2,\tau\rho\rangle)=\{\langle\rho^2,\tau\rho\rangle\}\\
+        &\text{orb}(X)=\{G\},\{\{e\}\},\{\langle\rho^2\rangle\},\{\langle\rho\rangle\},\{\langle\tau\rangle,\langle\tau\rho^2\rangle\},\{\langle\tau\rho\rangle,\langle\tau\rho^3\rangle\},\{\langle\rho^2,\tau\rangle\},\{\langle\rho^2,\tau\rho\rangle\}\\
+    \end{split}
+\end{equation*}
+
+~
+
+\subsection*{Problem 3}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &G\unlhd G\\
+        &\{e\}\unlhd G\\
+        &\langle\rho^2\rangle\unlhd G\\
+        &\langle\rho\rangle\unlhd G\\
+        &\langle\rho^2,\tau\rangle\unlhd G\\
+        &\langle\rho^2,\tau\rho\rangle\unlhd G\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 7}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &Id:n^4\\
+        &90\degree:0\leftarrow\text{ The sides cannot be the same since they are not fixed}\\
+        &180\degree:n^2\\
+        &\text{Flip}:\\
+        &\text{Opposite edges}:2n^2\\
+        &\text{Diagonal}:2n^2\\
+        &\frac{1}{|D_4|}(n^4+0+n^2+2n^2+2n^2)\\
+        =&\frac{1}{8}(n^4+5n^2)\\
+        =&\frac{n^4}{8}+\frac{5n^2}{8}\\
+        \Rightarrow&\frac{n^4}{8}+\frac{5n^2}{8}\text{ non-indistinguishable squares}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}
