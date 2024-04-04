@@ -1,0 +1,252 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\text{Suppose}:\exists f:\mathbb{R} \times\mathbb{R} \rightarrow \mathbb{C} \text{ is a ring isomorphism}\\
+        \Rightarrow&f(e_{\mathbb{R} \times\mathbb{R}})=e_\mathbb{C}\\
+        &\exists f((a,b))^4=f(e_{\mathbb{R} \times\mathbb{R}})=e_\mathbb{C}=(c+di)^4\\
+        &(a,b)^2=1\\
+        &(c+di)^2=\pm 1\\
+        \Rightarrow&\nexists f:\mathbb{R} \times\mathbb{R} \rightarrow \mathbb{C}\text{ is a bijection}\\
+        \Rightarrow&\mathbb{R} \times\mathbb{R}\text{ and }\mathbb{C}\text{ are not ring isomorphic}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &f:\mathbb{R} \times\mathbb{R} \rightarrow \mathbb{C}\\
+        &f:(a,b)\mapsto a+bi\\
+        &\text{By contruction, }f\text{ is bijective}\\
+        &f((a,b)+(c,d))\\
+        =&f((a+c,b+d))\\
+        =&a+c+(b+d)i\\
+        =&a+bi+c+di\\
+        =&f((a,b))+f((c+d))\\
+        \Rightarrow&f\text{ is homomorphic}\\
+        \Rightarrow&f\text{ is isomorphic}\\    
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\exists \begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix}\in S\\
+        &\text{Identity}:\\
+        &a=1,b=0\\
+        \Rightarrow&Id\in S\\
+        &\text{addition}:\\
+        &\exists\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix},\begin{bmatrix}
+            c&-d\\
+            d&c\\
+        \end{bmatrix}\\
+        &\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix}+\begin{bmatrix}
+            c&-d\\
+            d&c\\
+        \end{bmatrix}=\begin{bmatrix}
+            a+c&-b-d\\
+            b+d&a+c\\
+        \end{bmatrix}\in S\\
+        &\exists\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix},\begin{bmatrix}
+            c&-d\\
+            d&c\\
+        \end{bmatrix}\\
+        &\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix}\begin{bmatrix}
+            c&-d\\
+            d&c\\
+        \end{bmatrix}\\
+        =&\begin{bmatrix}
+            ac-bd&-(ad+bc)\\
+            ad+bc&ac-bd\\
+        \end{bmatrix}\in S\\
+        \Rightarrow&S\text{ is a subring}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem 2}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &f:S\rightarrow \mathbb{C} \\
+        &f:\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix}\mapsto a+bi\\
+        &\text{Identity}:\\
+        &a=1,b=0\\
+        &\begin{bmatrix}
+            1&0\\
+            0&1\\
+        \end{bmatrix}=Id_S\\
+        &1+0i=1=Id_\mathbb{C} \\
+        \Rightarrow&f(Id_S)=Id_\mathbb{C} \\
+        &\text{Addition}:\\
+        &\exists A=\begin{bmatrix}
+            a&-b\\
+            b&a\\
+        \end{bmatrix},B=\begin{bmatrix}
+            c&-d\\
+            d&c\\
+        \end{bmatrix}\\
+        &f(A+B)=f(\begin{bmatrix}
+            a+c&-b-d\\
+            b+d&a+c\\
+        \end{bmatrix})=a+c+(b+d)i\\
+        &f(A)+f(B)=a+bi+c+di=a+c+(b+d)i\\
+        \Rightarrow&f(A+B)=f(A)+f(B)\\
+        &\text{Multiplication}\\
+        &f(AB)=f(\begin{bmatrix}
+            ac-bd&-(ad+bc)\\
+            ad+bc&ac-bd\\
+        \end{bmatrix})=ac-bd+(ad+bc)i\\
+        &f(A)f(B)=(a+bi)(c+di)=ac-bd+(ad+bc)i\\
+        \Rightarrow&f(AB)=f(A)f(B)\\
+        &\text{By construction, }f\text{ us bijective}\\
+        \Rightarrow&f\text{ is a ring isomorphism}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{equation*}
+    \begin{split}
+        &f:\mathbb{Z} \rightarrow\mathbb{Z} \times\mathbb{Z} \text{ is a ring homomorphism}\\
+        &f(1)=\coloneqq(a,b)\\
+        &f(mn)=f(m)f(n)=m(a,b)n(a,b)=mn(a,b)^2=mn(a^2,b^2)\\
+        &f(mn)=mn(a,b)\\
+        \Rightarrow&(a,b)=(a^2,b^2)\\
+        &a=0,1\land b=0,1\\
+        \Rightarrow&4\text{ homomorphisms}:\\
+        &f_1(1)=(1,0)\rightarrow f_1(m)=(m,0)\\
+        &f_2(1)=(1,1)\rightarrow f_2(m)=(m,m)\\
+        &f_3(1)=(0,1)\rightarrow f_3(m)=(0,m)\\
+        &f_4(1)=(0,0)\rightarrow f_4(m)=(0,0)\\
+        &\text{By construction, }f_1,f_2,f_3\text{ are injective}\\
+        &f_4:\forall n\in \mathbb{Z} ,f(n)=(0,0)\\
+        \Rightarrow&f_4\text{ is not injective}\\
+        &\forall n\in\mathbb{Z} \forall a\ne b\ne 0,f_1(n)\ne f_2(n)\ne f_3(n)\ne f_4(n)\ne(a,b),(a,b)\in\mathbb{Z} \times\mathbb{Z}\\
+        \Rightarrow&f_1,f_2,f_3,f_4\text{ are all not surjective}\\
+    \end{split}
+\end{equation*}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\forall n\in R:\\
+        &(n+n)=(n+n)^2\\
+        &n+n=n^2+2n+n^2\\
+        &n+n=n+2n+n\\
+        &2n=0\\
+        &n\text{ is arbitrary}\\
+        \Rightarrow&\text{char}(R)=2\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\forall x,y\in R\\
+        &x+y=(x+y)^2\\
+        &x+y=(x+y)(x+y)\\
+        &x+y=x(x+y)+y(x+y)\\
+        &x+y=x^2+xy+yx+y^2\\
+        &x+y=x+xy+yx+y\\
+        &xy+yx=0\\
+        &\text{char}(R)=2\\
+        \Rightarrow&xy+xy=0\\
+        \Rightarrow&xy=yx\\
+        \Rightarrow&R\text{ is commutative}\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &D\text{ is a division ring}\\
+        &x\text{ is idempotent }\in D\\
+        \Rightarrow&x=x^2\\
+        &x^2-x=0\\
+        &x=0,1\\
+        &\text{Division ring cannot have zero divisors}\\
+        \Rightarrow&x=1(\text{multiplicative identity})\\
+        &x=0(\text{additive identity})\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}
