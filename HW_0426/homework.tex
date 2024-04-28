@@ -1,0 +1,554 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{systeme}
+\usepackage{mathtools}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{Question 1}
+
+~
+
+\subsection*{Problem a }
+
+~
+
+\begin{align*}
+    &\text{False}:\\
+    &a^{p-1}\equiv 1\mod p\Leftrightarrow \gcd(a,p)=1\land \varphi(p)=p-1\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &\text{True}:\\
+    &\forall n\geqslant 2,\gcd(n,n)=n\ne 1\\
+    &\varphi(n)=\#(p):p\leqslant n,\gcd(p,n)=1\\
+    \Rightarrow&\varphi(n)<n\\
+\end{align*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &\text{False}:\\
+    &\mathbb{Z} \text{ is not closed in multiplication}\\
+    \Rightarrow&\mathbb{Z} \text{ cannot be a kernel for ring homomorphism}\\
+\end{align*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{align*}
+    &\text{True}:\\
+    &(R,+,\times )\text{ is commutative}\\
+    &\forall x,y\in R:(x+I)\times(y+I)=x\times y +I=y\times x+I=(y+I)\times (x+I)\\
+    \Rightarrow&R/I\text{ is commutative}\\
+\end{align*}
+
+~
+
+\subsection*{Problem e}
+
+~
+
+\begin{align*}
+    &\text{True}:\\
+    &1\in I\\
+    &\forall r\in R:r\times 1=r\in I\\
+    \Rightarrow&R\subseteq I\\
+    &I\text{ is an ideal of }R\\
+    \Rightarrow&I\subseteq R\\
+    \Rightarrow&I=R\\
+\end{align*}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &x^6+3x^5+x+1\\
+    =&x^4(x^2+2x-1)+x^5+x^4+x+1\\
+    =&x^4(x^2+2x-1)+x^3(x^2+2x-1)-x^4-x^3+x+1\\
+    =&x^4(x^2+2x-1)+x^3(x^2+2x-1)-x^2(x^2+2x-1)+3x^3-x^2+x+1\\
+    =&x^4(x^2+2x-1)+x^3(x^2+2x-1)-x^2(x^2+2x-1)+3x(x^2+2x-1)-7x^2+4x+1\\
+    \equiv&(x^4+x^3-x^2+3x)(x^2+2x-1)+4x+1\mod 7\\
+    \Rightarrow&q(x)=x^4+x^3-x^2+3x,r(x)=4x+1\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &x^6+3x^5+x+1\\
+    =&5x^4(3x^2+2x-1)-14x^6-7x^5+5x^4+x+1\\
+    \equiv&5x^4(3x^2+2x-1)+5x^4+x+1\mod 7\\
+    =&5x^4(3x^2+2x-1)+4x^2(3x^2+2x-1)-7x^4-8x^3+4x^2+x+1\\
+    \equiv&5x^4(3x^2+2x-1)+4x^2(3x^2+2x-1)-x^3+4x^2+x+1\mod 7\\
+    =&5x^4(3x^2+2x-1)+4x^2(3x^2+2x-1)-5x(3x^2+2x-1)+14x^3+14x^2-4x+1\\
+    \equiv&5x^4(3x^2+2x-1)+4x^2(3x^2+2x-1)-5x(3x^2+2x-1)-4x+1\mod 7\\
+    =&(5x^4+4x^2-5x)(3x^2+2x-1)-4x+1\\
+    \Rightarrow&q(x)=5x^4+4x^2-5x,r(x)=-4x+1\\
+\end{align*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &x^4+5x^3-3x^2\\
+    =&9x^2(5x^2-x+2)-44x^4+14x^3-21x^2\\
+    \equiv&9x^2(5x^2-x+2)+3x^3+x^2\mod 11\\
+    =&9x^2(5x^2-x+2)+5x(5x^2-x+2)-22x^3+6x^2-10x\\
+    \equiv&9x^2(5x^2-x+2)+5x(5x^2-x+2)+6x^2+x\mod 11\\
+    =&9x^2(5x^2-x+2)+5x(5x^2-x+2)+10(5x^2-x+2)-44x^2+11x-20\\
+    \equiv&9x^2(5x^2-x+2)+5x(5x^2-x+2)+10(5x^2-x+2)+2\mod 11\\
+    =&(9x^2+5x+10)(5x^2-x+2)+2\\
+    \Rightarrow&q(x)=9x^2+5x+10,r(x)=2\\
+\end{align*}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{Problem a}
+
+\begin{proof}
+    \begin{align*}
+        &p(0)=0^2+0+1\equiv 1\mod 5\\
+        &p(1)=1^2+1+1\equiv 3\mod 5\\
+        &p(2)=2^2+2+1\equiv 2\mod 5\\
+        &p(3)=3^2+3+1\equiv 3\mod 5\\
+        &p(4)=4^2+4+1\equiv 1\mod 5\\
+        \Rightarrow&p(x)\text{ is irreducable in }\mathbb{Z} _5\\
+        &p(0)=0^2+0+1\equiv 1\mod 29\\
+        &p(1)=1^2+1+1\equiv 3\mod 29\\
+        &p(2)=2^2+2+1\equiv 2\mod 29\\
+        &p(3)=3^2+3+1\equiv 13\mod 29\\
+        &p(4)=4^2+4+1\equiv 21\mod 29\\
+        &p(5)=5^5+5+1\equiv 2\mod 29\\
+        &\vdots \\
+        &p(28)=28^+28+1\equiv 1\mod 29\\
+        \Rightarrow&\nexists n\in \mathbb{Z} _29:p(n)\equiv 0\mod 29\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &f(x)=x^3-a\\
+        &f(0)\equiv -a\mod 7\\
+        &f(1)\equiv 1-a\mod 7\\
+        &f(2)\equiv 1-a\mod 7\\
+        &f(3)\equiv -1-a\mod 7\\
+        &f(4)\equiv 1-a\mod 7\\
+        &f(5)\equiv -1-a\mod 7\\
+        &f(6)\equiv -1-a\mod 7\\
+        &-a:\\
+        &a=0\implies -a\equiv 0\mod 7\\
+        &1-a:\\
+        &a=1\implies 1-a\equiv 0\mod 7\\
+        &-1-a:\\
+        &a=-1\implies -1-a\equiv 0\mod 7\\
+        \Rightarrow&f(x)\text{ is reducable if }a=0,\pm 1\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &f(x)=x^5+1\\
+    &f(0)\equiv 1\mod 2\\
+    &f(1)\equiv 0\mod 2\\
+    \Rightarrow&x-1\text{ is a factor}\\
+    &x^5+1\equiv(x-1)(x^4+x^3+x^2+x+1)\mod 2\\
+    &g(x)=x^4+x^3+x^2+x+1\\
+    &g(0)\equiv 1\mod 2\\
+    &g(1)\equiv 1\mod2\\
+    \Rightarrow&g(x)\text{ is irreducable}\\
+    \Rightarrow&x^5+1\equiv (x+1)(x^4+x^3+x^2+x+1)\mod 2\\
+\end{align*}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\phi:F\rightarrow R\\
+        &F,\{0\}\text{ are the only ideal in }F\\
+        &\Rightarrow \ker(\phi)=\{0\}\lor F\\
+        &\phi\text{ is not injective}\\
+        \Rightarrow & \ker(\phi)\ne\{0\}\\
+        \Rightarrow &\ker(\phi)=F\\
+        &\phi\text{ is trivial}\\
+    \end{align*}
+\end{proof}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &\phi(0)=0\in\phi[N]\\
+        &\forall r,s\in N\\
+        &r^{-1}\in N\\
+        &\phi(r)^{-1}=\phi(r^{-1})\in\phi[N]\\
+        &r'\coloneqq \phi(r),s'\coloneqq \phi(s)\\
+        &\phi(r),\phi(s)\in \phi[N]\\
+        &\phi(r)+\phi(s)=\phi(r+s)\\
+        &r+s\in N\\
+        \Rightarrow&\phi(r+s)\in\phi[N]\\
+        &\phi(r)+\phi(s)\in\phi[N]\\
+        &\forall a\in R,\phi(a)\in\phi[R]\\
+        &\phi(a)\phi(r)=\phi(ar)\\
+        &N\text{ is an ideal}\\
+        &ar\in N\\
+        \Rightarrow&\phi(ar)\in \phi[N]
+        \Rightarrow&\phi[N]\text{ is an ideal of }\phi[R]\\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &f:\mathbb{Z} \rightarrow \mathbb{Q} \\
+        &3\mathbb{Z} \text{ is an ideal in }\mathbb{Z} \\
+        &1\notin 3\mathbb{Z} \implies 1\notin f(3\mathbb{Z} )\\
+        &\frac{1}{3}\in\mathbb{Q} \\
+        &\frac{1}{3}\times3 =1\in f(3\mathbb{Z} )\\
+        &1\in f(3\mathbb{Z} )\nLeftrightarrow1\notin f(3\mathbb{Z} )\\
+        \Rightarrow&f(3\mathbb{Z} )\text{ is not an ideal in }\mathbb{Q} \\
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &0\in N'\\
+    &\text{Only }0\text{ maps to }0\\
+    \Rightarrow&0\in \phi^{-1}[N']\\
+    &\forall r,s\in N'\\
+    &r^{-1}\in N'\\
+    \Rightarrow&\phi^{-1}(r^{-1})\in \phi^{-1}[N']\\
+    &r'\coloneqq \phi^{-1}(r),s'\coloneqq \phi^{-1}(s)\\
+    &\phi(r')=r,\phi(s')=s\\
+    &r',s'\in phi^{-1}[N']\\
+    &\phi(r'+s')=\phi(r')+\phi(s')=r+s\in N'\\
+    \Rightarrow&r'+s'\in\phi^{-1}[N']\\
+    &\forall a\in R\\
+    &\phi(ar')=\phi(a)r\\
+    &N'\text{ is an ideal},\phi(a)\in \phi[R]\\
+    \Rightarrow&\phi(a)r\in N'\\
+    \Rightarrow&ar'\in \phi^{-1}[N']\\
+    \Rightarrow&\phi^{-1}N'\text{ is an ideal in }R\\
+\end{align*}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\subsection*{Problem a }
+
+~
+
+\begin{proof}
+    \begin{align*}
+        &0\in I,0\in J\\
+        \Rightarrow&0\in I\cap J\\
+        &\forall a,b\in I\cap J\\
+        \Rightarrow&a,b\in I\land a,b \in J\\
+        &a^{-1}\in I,a^{-1}\in J\\
+        \Rightarrow&a^{-1}\in I\cap J\\
+        &a+b\in I,a+b\in J\\
+        \Rightarrow&a+b\in I+J\\
+        &\forall c\in R\\
+        &ac\in I,ac\in J\\
+        \Rightarrow&ac\in I\cap J\\
+        \Rightarrow&I\cap J\text{ is an ideal}\\
+        &K\text{ is a ideal contained in both }I\text{ and }J\\
+        &K\subset I\land K\subset J\\
+        \Rightarrow& K \subset I\cap J\\
+        &K\text{ is arbitrary}\\
+        \Rightarrow&I\cap J\text{ is the biggest ideal contained in }I\text{ and J}
+    \end{align*}
+\end{proof}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &0\in I,0\in J\\
+    \rightarrow&0+0=0\in I+J\\
+    &\forall a,b\in I,c,d\in J\\
+    &a+c\in I+J\\
+    &a^{-1}\in I,c^{-1}\in J\\
+    \Rightarrow&a^{-1}+c^{-1}\in I+J\\
+    &a^{-1}+c^{-1}=(a+c)^{-1}\\
+    &(a+c)^{-1}\in I+J\\
+    &a+c\in I+J,b+d\in I+J\\
+    &(a+c)+(b+d)=(a+b)+(c+d)\\
+    &a+b\in I,c+d\in J\\
+    \Rightarrow&(a+b)+(c+d)\in I+J\\
+    &a+c\in I+J,r\in R\\
+    &r(a+c)=ra+rc\\
+    &ra\in I,rc\in J\\
+    \Rightarrow&ra+rc\in I+J\\
+    \Rightarrow&I+J\text{ is an ideal}\\
+    &\text{Let }K\text{ be an ideal containing }I\text{ and }J\\
+    &K\text{ is additively closed}\\
+    \Rightarrow&I+J\subseteq K\text{ since this is the requirement for two ideals to be additively closed}\\
+    \Rightarrow&I+J\text{ is the smallest ideal}\\
+\end{align*}
+
+\newpage
+
+\section*{Question 7}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &\forall n\in \mathbb{Z}_+,0^n=0\\
+    \Rightarrow&0\in N\\
+    &\forall a,b\in N,\exists n,m\in \mathbb{Z} _+:a^n=b^m=0\\
+    &(-a)^n=(-1)^n\times a^n=-1^n\times0=0\\
+    \Rightarrow&-a\in N\\
+    &(a+b)^{m+n}=\sum^{m+n}_{k}\binom{m+n}{k}a^kb^{m+n-k}\\
+    &\forall k\leqslant m+n:\begin{cases}
+        k<n:b^{m+n-k}=0\\
+        k\geqslant n:a^k=0\\
+    \end{cases}\\
+    \Rightarrow&\forall k\leqslant m+n\binom{m+n}{k}a^kb^{m+n-k}=0\\
+    \Rightarrow&(a+b)^{m+n}=0\\
+    &a+b\in N\\
+    &(ab)^n=a^nb^n\\
+    &a^n=0\\
+    \Rightarrow&(ab)^n=0\\
+    &ab\in N\\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &\text{Suppose }a+N\text{ is nilpotent}\\
+    \Rightarrow&\exists n\in \mathbb{Z} _+:(a+N)^n=0+N\\
+    &(a+N)^n=a^n+N=0+N\\
+    \Rightarrow&a^n\text{ is nilpotent}\\
+    &\exists m:{a^n}^m=a^{mn}=0\\
+    \Rightarrow&a\text{ is nilpotent}\\
+    &a\in N\\
+    \Rightarrow&a+N=0+N\\
+\end{align*}
+
+\newpage
+
+\section*{Question 8}
+
+~
+
+\subsection*{Problem a}
+
+~
+
+\begin{align*}
+    &\text{Possible}:\\
+    &R=\langle2\mathbb{Z} ,+,\times\rangle\\
+    &\text{multiplication identity is }1\\
+    &1\notin 2\mathbb{Z} \\
+\end{align*}
+
+~
+
+\subsection*{Problem b}
+
+~
+
+\begin{align*}
+    &\text{Possible}:\\
+    &R=\langle \mathbb{Z} _6,+_6,\times_6\rangle\\
+    &1\in \mathbb{Z} _6\\
+    &2\times 3\equiv 0\mod 6\\
+    &2\ne 0\mod 6,3\ne0\mod 6\\
+\end{align*}
+
+~
+
+\subsection*{Problem c}
+
+~
+
+\begin{align*}
+    &\text{Possible}:\\
+    &R=\langle M_{2\times 2}(\mathbb{R} ),+,\times\rangle\\
+    &\begin{bmatrix}
+        a&b\\
+        c&d\\
+    \end{bmatrix}\begin{bmatrix}
+        e&f\\
+        g&h\\
+    \end{bmatrix}\ne\begin{bmatrix}
+        e&f\\
+        g&h\\
+    \end{bmatrix}\begin{bmatrix}
+        a&b\\
+        c&d\\
+    \end{bmatrix}\\
+    &\begin{bmatrix}
+        1&0\\
+        0&1\\
+    \end{bmatrix}\in M_{2\times 2}(\mathbb{R} )\text{ is the unit}\\
+\end{align*}
+
+~
+
+\subsection*{Problem d}
+
+~
+
+\begin{align*}
+    &\text{Possible}:\\
+    &R=\langle \begin{bmatrix}
+        a&b\\
+        0&0\\
+    \end{bmatrix} ,+,\times\rangle\\
+    &\begin{bmatrix}
+        a&b\\
+        0&0\\
+    \end{bmatrix}\begin{bmatrix}
+        c&d\\
+        0&0\\
+    \end{bmatrix}\ne\begin{bmatrix}
+        c&d\\
+        0&0\\
+    \end{bmatrix}\begin{bmatrix}
+        a&b\\
+        0&0\\
+    \end{bmatrix}\\
+    &\begin{bmatrix}
+        1&0\\
+        0&1\\
+    \end{bmatrix}\notin R\\
+\end{align*}
+
+~
+
+\subsection*{Problem e}
+
+~
+
+\begin{align*}
+    &\text{Not Possible}:\\
+    &R\text{ is a field}\\
+    \Rightarrow&\forall r,s\ne0\in R,\exists s\in R:rs\ne0\\
+    &R\text{ is an integral domain}\\
+\end{align*}
+
+~
+
+\subsection*{Problem f}
+
+~
+
+\begin{align*}
+    &\text{Possible}:\\
+    &R=\langle\mathbb{Z} ,+,\times\rangle\\
+    &\forall m,n\ne0\in R,mn\ne0\\
+    &\forall p\in R,\nexists q\in R: pq=1\\
+    \Rightarrow&R\text{ is not a field}\\
+\end{align*}
+
+\subsection*{Problem g}
+
+~
+
+\begin{align*}
+    &\text{Not Possible}:\\
+    &R\text{ is a finite integral domain}\\
+    &\forall n\in R:\\
+    &n^m\in R\\
+    &R\text{ is finite}\\
+    \Rightarrow&\exists p,q\in\mathbb{Z} :n^p=n^q\\
+    \Rightarrow&n^{p-q}=1\leftarrow \text{cancellation}\\
+    \Rightarrow&n^{p-q-1}\times n=1\\
+    &n\text{ has an inverse}\\
+    \Rightarrow&R\text{ is a field}\\
+\end{align*}
+
+\newpage
+
+\section*{Reference}
+
+~
+
+Jeffery Shu
+\end{document}
